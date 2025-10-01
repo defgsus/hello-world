@@ -1,7 +1,9 @@
 # Test repo for releasing a shell-script package
 
 [![.github/workflows/run-tests.yml](https://github.com/defgsus/hello-world/actions/workflows/run-tests.yml/badge.svg?branch=main)](https://github.com/defgsus/hello-world/actions/workflows/run-tests.yml)
+[![.github/workflows/run-tests.yml](https://github.com/defgsus/hello-world/actions/workflows/run-tests.yml/badge.svg?branch=development)](https://github.com/defgsus/hello-world/actions/workflows/run-tests.yml)
 
+---
 
 The actual script is 
 
@@ -9,7 +11,7 @@ The actual script is
 ./hello-world
 ```
 
-which prints "Hello World!".
+which prints "Hello World!"
 
 Tests are run like this:
 
