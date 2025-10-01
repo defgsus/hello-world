@@ -1,7 +1,9 @@
 # Test repo for releasing a shell-script package
 
 [![.github/workflows/run-tests.yml](https://github.com/defgsus/hello-world/actions/workflows/run-tests.yml/badge.svg?branch=main)](https://github.com/defgsus/hello-world/actions/workflows/run-tests.yml)
+[![.github/workflows/run-tests.yml](https://github.com/defgsus/hello-world/actions/workflows/run-tests.yml/badge.svg?branch=development)](https://github.com/defgsus/hello-world/actions/workflows/run-tests.yml)
 
+---
 
 The actual script is 
 
@@ -9,7 +11,7 @@ The actual script is
 ./hello-world
 ```
 
-which prints "Hello World!".
+which prints "Hello World!"
 
 Tests are run like this:
 
@@ -30,5 +32,11 @@ Previewing the man page:
 - [ ] Build package (via github actions)
 - [ ] Build a manpage (via github actions)
 - [ ] Publish documentation on github pages (via github actions)
-- [ ] Make sure, nobody triggers github actions from outside (e.g, https://nx.dev/blog/s1ngularity-postmortem#the-vulnerability)
-
+- [ ] Supply chain security
+  - [ ] Check through https://docs.github.com/en/actions/reference/security/secure-use 
+  - [x] Make sure, nobody triggers github actions from outside (e.g, https://nx.dev/blog/s1ngularity-postmortem#the-vulnerability)
+    - Set `Settings > Actions > General > Approval for running fork pull request workflows from contributors` to `Require approval for all external contributors`
+  - [x] Least privilege 
+    - Leave `Settings > Actions > General > Workflow permissions` at `Read repository contents and packages permissions`
+    - Use `permissions` option in specific workflows as needed 
+      
