@@ -1,5 +1,8 @@
 # Test repo for releasing a shell-script package
 
+[![.github/workflows/run-tests.yml](https://github.com/defgsus/hello-world/actions/workflows/run-tests.yml/badge.svg?branch=main)](https://github.com/defgsus/hello-world/actions/workflows/run-tests.yml)
+
+
 The actual script is 
 
 ```shell
