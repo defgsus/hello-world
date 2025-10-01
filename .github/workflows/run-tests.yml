@@ -1,0 +1,14 @@
+on:
+  pull_request:
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./
+    steps:
+      - name: Check-out
+        uses: actions/checkout@v5
+      - name: Run tests
+        run: ./tests.sh
