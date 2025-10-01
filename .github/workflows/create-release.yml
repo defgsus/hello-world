@@ -2,6 +2,7 @@ name: Create release
 
 on:
   push:
+    # Unfortunately these filters a OR-combined
     branches:
       - main
     tags:
@@ -15,6 +16,11 @@ jobs:
     name: Release
     runs-on: ubuntu-latest
     steps:
+      - name: Show context for debugging
+        env:
+          EVENT_CONTEXT: ${{ toJSON(github.event) }}
+        run: |
+          echo $EVENT_CONTEXT
       - name: Check-out
         # version 5.0.0: https://github.com/actions/checkout/commit/08c6903cd8c0fde910a37f88322edcfb5dd907a8
         uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
