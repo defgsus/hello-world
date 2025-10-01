@@ -1,7 +1,8 @@
+on:
+  pull_request:
+
 jobs:
   run-tests:
-    on:
-      pull_request:
     runs-on: ubuntu-latest
     defaults:
       run:
